@@ -56,6 +56,13 @@ sys_sbrk(void)
   return addr;
 }
 
+// return the pid of the parent process
+int 
+sys_getppid(void)
+{
+  return proc->parent->pid;
+}
+
 int
 sys_sleep(void)
 {
