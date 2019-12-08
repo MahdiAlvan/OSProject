@@ -60,7 +60,6 @@ sys_sbrk(void)
 int 
 sys_getppid(void)
 {
-  // return myproc->parent->pid;
   return myproc()->parent->pid;
 }
 
