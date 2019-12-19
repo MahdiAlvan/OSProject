@@ -98,8 +98,10 @@ sys_uptime(void)
 }
 
 int
-sys_getChildren(int)
+sys_getChildren(void)
 {
-  getChildren(int);
-  return 0;
+  int pid;
+  if(argint(0, &pid) < 0)
+    return -1;
+  return getChildren(pid);
 }
